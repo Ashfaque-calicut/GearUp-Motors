@@ -29,7 +29,7 @@ app.use("/api/login",LoginRouter)
 app.use("/api/register",RegisterRouter)
 
 
-app.get('/',()=>{
+app.get('/',(req,res)=>{
     res.send("server is started")
 })
 app.get('/check',CheckAuth,verifyAccess,(req,res)=>{
