@@ -42,14 +42,21 @@ const BikeCard = () => {
   // console.log(token);
   const cardStyle = {
     width: '400px',
-    height: role === 2 ? '400px' : '600px', 
-  };
+    height: role === 2 ? '500px' : '600px', 
+  }
 
   return (
-    
-   
+    <div>
+     <h2>Featured Bikes</h2>
+     {role === 1 && (
+            <Button variant="success">
+              <Link to="/add-bike" className="text-white">
+                Add Bike
+              </Link>
+            </Button>
+          )}
       <div className="bike-card-container">
-           <h2>Featured Bikes</h2>
+         
         {bikee.length > 0 ? (
           bikee.map((item) => (
             <div key={item._id} className="card-container">
@@ -64,9 +71,8 @@ const BikeCard = () => {
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>{item.description}</Card.Text>
                   <Card.Text>Price: {item.price}</Card.Text>
-                  {role === 1 && (
-                    <>
-                      <Button variant="primary">
+                 
+                      <Button variant="warning">
                         <Link
                           to={`/SingleBike/${item._id}`}
                           className="nav-link"
@@ -74,6 +80,8 @@ const BikeCard = () => {
                           View
                         </Link>
                       </Button>
+                       {role === 1 && (
+                    <>
                       <Button variant="primary">
                         <Link
                           to={`/EditBikeForm/${item._id}`}
@@ -97,14 +105,9 @@ const BikeCard = () => {
           <p>No bikes found</p>
         )}
         
-          {role === 1 && (
-            <Button>
-              <Link to="/add-bike" className="text-white">
-                Add Bike
-              </Link>
-            </Button>
-          )}
+       
       
+      </div>
       </div>
     
   );

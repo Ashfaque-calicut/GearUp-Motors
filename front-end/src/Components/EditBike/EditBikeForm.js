@@ -49,8 +49,8 @@ function EditBikeForm() {
     formData.append("price", bike.price);
 
     axios
-      // .put(`http://localhost:3900/api/bike/update-bike/${id}`, formData)
-      .put(`https://gearup-motors.onrender.com/api/bike/update-bike/${id}`, formData)
+      .put(`http://localhost:3900/api/bike/update-bike/${id}`, formData)
+      // .put(`https://gearup-motors.onrender.com/api/bike/update-bike/${id}`, formData)
 
       .then((response) => {
         navigate("/Bike");

@@ -7,6 +7,7 @@ import image14 from '../../assets/images/image14.jpg';
 import image13 from '../../assets/images/image13.jpg';
 import image11 from '../../assets/images/image11.jpg';
 import bgimage from '../../assets/images/bgimage.jpg'; // Import your new banner image
+import BikeCard from '../BikeCard/BikeCard';
 
 const Banner = () => {
   return (
@@ -22,6 +23,7 @@ const Banner = () => {
         </div>
       </section>
       <h1> Wel<span style={{ color: "red" }}>COME</span> </h1>
+      <BikeCard/>
       <Carousel showArrows={true} showThumbs={false} autoPlay={true} interval={1000} infiniteLoop>
         <div>
           <img src={image12} alt="Image 1" className="carousel-image" />
