@@ -42,7 +42,7 @@ const BikeCard = () => {
   // console.log(token);
   const cardStyle = {
     width: '400px',
-    height: role === 2 ? '400px' : '600px', 
+    height: role === 2 ? '400px' : '400px', 
   }
 
   return (
