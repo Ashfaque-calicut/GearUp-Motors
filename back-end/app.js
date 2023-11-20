@@ -28,6 +28,10 @@ app.use("/api/booking",bookingRouter)
 app.use("/api/login",LoginRouter)
 app.use("/api/register",RegisterRouter)
 
+
+app.get('/',()=>{
+    res.send("server is started")
+})
 app.get('/check',CheckAuth,verifyAccess,(req,res)=>{
     res.send("this is authentication testing")
 })
