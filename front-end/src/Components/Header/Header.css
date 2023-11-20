@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color:white;
+  color:black;
+}
+.logo{
+  font-size: 46px;
+}
+.logo-link {
+  text-decoration: none;
+}
+
+
+.nav ul {
+  list-style: none;
+  display: flex;
+ 
+}
+
+.nav ul li {
+  margin-right: 20px;
+  color: black;
+}
+.nav-link{
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    margin-top: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+}

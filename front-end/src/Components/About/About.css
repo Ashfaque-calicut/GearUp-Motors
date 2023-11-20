@@ -1,0 +1,46 @@
+/* About.css */
+.about {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 0; /* Adjust padding as needed */
+}
+
+.about-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video is behind the content */
+}
+
+.about-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  position: relative; /* Change from flex to relative positioning */
+  max-width: 800px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0;
+  }
+
+  .about-content {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,78 @@
+.banner {
+  position: relative;
+}
+
+.banner-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 650px; /* Adjust the height as needed */
+  /* Add any additional styles you want for the banner image */
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  z-index: 1; /* Set a higher z-index to keep it above the image */
+  width: 80%; /* Adjust the width as needed */
+}
+
+.banner-content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.banner-content h1 {
+  font-size: 3em;
+}
+
+.banner-content p {
+  font-size: 1.2em;
+}
+
+.carousel-image {
+  height: 500px; /* Adjust the height as needed for carousel images */
+  /* Add any other styles you want for carousel images */
+}
+
+@media (max-width: 768px) {
+  .banner-content h2 {
+    font-size: 1.5em;
+  }
+
+  .banner-content h1 {
+    font-size: 2em;
+  }
+
+  .banner-content p {
+    font-size: 1em;
+  }
+}
+h1 {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .banner-content h2 {
+    font-size: 1.2em;
+  }
+
+  .banner-content h1 {
+    font-size: 1.5em;
+  }
+
+  .banner-content p {
+    font-size: 0.9em;
+  }
+}
+

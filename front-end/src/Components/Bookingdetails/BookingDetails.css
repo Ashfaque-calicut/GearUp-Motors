@@ -1,0 +1,21 @@
+/* Example media query for responsiveness */
+/* You can adjust the breakpoints and styles as needed */
+@media (max-width: 768px) {
+    .booking-details {
+      width: 100%;
+      height: auto;
+    }
+    /* Additional responsive styles can be added here */
+  }
+
+  /* Example CSS for table and cell borders */
+.table {
+    border: 1px solid #dee2e6; /* Table border */
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #dee2e6; /* Cell borders */
+  }
+  
+  
