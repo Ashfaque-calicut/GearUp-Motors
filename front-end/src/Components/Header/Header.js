@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './Header.css';
 import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
+import './Header.css';
 
 const Header = () => {
   const [token, setToken] = useState(sessionStorage.getItem('token'));
   const role = sessionStorage.getItem('role');
-
 
   const handleLogout = () => {
     sessionStorage.removeItem('token');
@@ -14,88 +14,70 @@ const Header = () => {
   };
 
   return (
-    <header className='header'>
-      <div className='logo'>
-      <span style={{color:'blue'}}> GearUp</span>  <span style={{ color: 'red' }}>Motors</span>
-       
-      </div>
-      <nav className='nav'>
-        <ul>
-          <li>
-            <Link to='/' className='nav-link'>
+    <Navbar bg="light" expand="lg" className="header" collapseOnSelect>
+      <Container>
+        <Navbar.Brand>
+          <Link to='/' className='nav-link'>
+            <span style={{ color: 'blue' }}> GearUp</span> <span style={{ color: 'red' }}>Motors</span>
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to='/' className='nav-link'>
               Home
-            </Link>
-          </li>
-          {token && (
-            <li>
-              <Link to='/Bike' className='nav-link'>
+            </Nav.Link>
+            {token && (
+              <Nav.Link as={Link} to='/Bike' className='nav-link'>
                 Bikes
-              </Link>
-            </li>
-          )}
-          {role==2 && (
-            <li>
-              <Link to='/Booking' className='nav-link'>
+              </Nav.Link>
+            )}
+            {role === 2 && (
+              <Nav.Link as={Link} to='/Booking' className='nav-link'>
                 Booking
-              </Link>
-            </li>
-          )}
-          {
-            role==2 &&(
-              <li>
-                <Link to='/user-booking' className='nav-link'>
-                  BookingDetails
-                </Link>
-              </li>
-            )
-          }
-          {role == 1 && (
-            <li>
-              <Link to='/bookingDetails' className='nav-link'>
+              </Nav.Link>
+            )}
+            {role === 2 && (
+              <Nav.Link as={Link} to='/user-booking' className='nav-link'>
                 BookingDetails
-              </Link>
-            </li>
-          )}
-          <li>
-            <Link to='/About' className='nav-link'>
+              </Nav.Link>
+            )}
+            {role === 1 && (
+              <Nav.Link as={Link} to='/bookingDetails' className='nav-link'>
+                BookingDetails
+              </Nav.Link>
+            )}
+            <Nav.Link as={Link} to='/About' className='nav-link'>
               About Us
-            </Link>
-          </li>
-          <li>
-            <Link to='/contact' className='nav-link'>
+            </Nav.Link>
+            <Nav.Link as={Link} to='/contact' className='nav-link'>
               Contact
-            </Link>
-          </li>
-          {token &&(
-            <li>
-              <Link to='/profile' className='nav-link'>
-              Profile
-              </Link> 
-            </li>
-          )}
-          {token ? (
-            <li>
-              <Link to='/Login' className='nav-link' onClick={handleLogout}>
+            </Nav.Link>
+            {token && (
+              <Nav.Link as={Link} to='/profile' className='nav-link'>
+                Profile
+              </Nav.Link>
+            )}
+          </Nav>
+          <Nav>
+            {token ? (
+              <Nav.Link as={Link} to='/Login' className='nav-link' onClick={handleLogout}>
                 Logout
-              </Link>
-            </li>
-          ) : (
-            <>
-              <li>
-                <Link to='/Login' className='nav-link'>
+              </Nav.Link>
+            ) : (
+              <>
+                <Nav.Link as={Link} to='/Login' className='nav-link'>
                   Login
-                </Link>
-              </li>
-              <li>
-                <Link to='/Register' className='nav-link'>
+                </Nav.Link>
+                <Nav.Link as={Link} to='/Register' className='nav-link'>
                   Register
-                </Link>
-              </li>
-            </>
-          )}
-        </ul>
-      </nav>
-    </header>
+                </Nav.Link>
+              </>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
