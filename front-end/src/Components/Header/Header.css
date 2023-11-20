@@ -1,47 +1,45 @@
+/* Header.css */
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color:white;
-  color:black;
-}
-.logo{
-  font-size: 46px;
-}
-.logo-link {
-  text-decoration: none;
+  background-color: #f8f9fa; /* Light gray background color */
+  padding: 15px 0;
 }
 
-
-.nav ul {
-  list-style: none;
-  display: flex;
- 
+.nav-link {
+  color: #343a40 !important; /* Dark text color */
+  margin-right: 15px;
 }
 
-.nav ul li {
-  margin-right: 20px;
-  color: black;
+.navbar-brand {
+  color: #007bff !important; /* Primary blue color for the brand */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 15px;
 }
-.nav-link{
-  color: black;
+
+.navbar-brand span {
+  font-weight: normal;
 }
-@media screen and (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .nav {
-    margin-top: 20px;
-  }
+.navbar-toggler-icon {
+  color: #007bff; /* Primary blue color for the toggle icon */
+}
 
-  .nav ul {
-    flex-direction: column;
-  }
+.navbar-toggler {
+  border-color: #007bff; /* Primary blue color for the toggle button border */
+}
 
-  .nav ul li {
-    margin: 10px 0;
-  }
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #0056b3 !important; /* Darker blue color on hover or active */
+}
+
+.bg-body-tertiary {
+  background-color: #f8f9fa; /* Light gray background color */
 }
