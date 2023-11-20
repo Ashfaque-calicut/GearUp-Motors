@@ -6,7 +6,6 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
 
-
 const EditProfile = () => {
   const token=sessionStorage.getItem("token")
     const navigate = useNavigate();
@@ -19,7 +18,9 @@ const EditProfile = () => {
       });
       useEffect(() => {
         axios
-          .get(`http://localhost:3900/api/bike/profile`,{
+          // .get(`http://localhost:3900/api/bike/profile`,{
+            .get(`https://gearup-motors.onrender.com/api/bike/profile`,{
+
             headers:{
               Authorization:`Bearer ${token}`
             }
@@ -41,7 +42,9 @@ const EditProfile = () => {
       const handleSubmit = (event) => {
         event.preventDefault();
         axios
-          .put(`http://localhost:3900/api/bike/update-profile/${product._id}`,product,
+          // .put(`http://localhost:3900/api/bike/update-profile/${product._id}`,product,
+          .put(`https://gearup-motors.onrender.com/api/bike/update-profile/${product._id}`,product,
+
           )
 
           .then(() => {

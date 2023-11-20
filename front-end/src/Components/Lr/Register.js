@@ -56,11 +56,13 @@ const [errors,setErrors]=useState({})
       alert("Form submitted successfully");
     }
     
-    axios.post(`http://localhost:3900/api/register`, details)
+    // axios.post(`http://localhost:3900/api/register`, details)
+    axios.post(`https://gearup-motors.onrender.com/api/register`, details)
+
     .then((response) => {
       navigate('/Login');
     })
- 
+
   }
 
   const handleinputchange=(event)=>{

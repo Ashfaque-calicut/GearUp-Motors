@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./EditBikeForm.css";
 
+
 function EditBikeForm() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -17,7 +18,9 @@ function EditBikeForm() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3900/api/bike/singlebike-bike/${id}`)
+      // .get(`http://localhost:3900/api/bike/singlebike-bike/${id}`)
+      .get(`https://gearup-motors.onrender.com/api/bike/singlebike-bike/${id}`)
+
       .then((response) => {
         console.log("Response:", response.data.data);
         setBike(response.data.data);
@@ -46,7 +49,9 @@ function EditBikeForm() {
     formData.append("price", bike.price);
 
     axios
-      .put(`http://localhost:3900/api/bike/update-bike/${id}`, formData)
+      // .put(`http://localhost:3900/api/bike/update-bike/${id}`, formData)
+      .put(`https://gearup-motors.onrender.com/api/bike/update-bike/${id}`, formData)
+
       .then((response) => {
         navigate("/Bike");
       });

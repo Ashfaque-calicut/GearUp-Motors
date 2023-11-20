@@ -9,7 +9,9 @@ function BookingDetails() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3900/api/booking/view-booking', {
+      // .get('http://localhost:3900/api/booking/view-booking', {
+        .get('https://gearup-motors.onrender.com/api/booking/view-booking', {
+
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -30,7 +32,9 @@ function BookingDetails() {
   
 
   const handleReject = (bookingId, index) => {
-    axios.put(`http://localhost:3900/api/booking/reject-booking/${bookingId}`)
+    // axios.put(`http://localhost:3900/api/booking/reject-booking/${bookingId}`)
+    axios.put(`https://gearup-motors.onrender.com/api/booking/reject-booking/${bookingId}`)
+
       .then((response) => {
         const newStatusData = [...statusData];
         newStatusData[index] = { ...newStatusData[index], rejected: true };
@@ -39,7 +43,9 @@ function BookingDetails() {
   };
 
   const handleAccept = (bookingId, index) => {
-    axios.put(`http://localhost:3900/api/booking/approve-booking/${bookingId}`)
+    // axios.put(`http://localhost:3900/api/booking/approve-booking/${bookingId}`)
+    axios.put(`https://gearup-motors.onrender.com/api/booking/approve-booking/${bookingId}`)
+
       .then((response) => {
         const newStatusData = [...statusData];
         newStatusData[index] = { ...newStatusData[index], approved: true , deliveryDate: calculateDeliveryDate(bookingData[index].bookingdate) };

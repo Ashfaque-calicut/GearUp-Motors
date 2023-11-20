@@ -4,11 +4,14 @@ import './DeleteBike.css'
 import { Button } from 'react-bootstrap'
 import { useParams,useNavigate } from 'react-router-dom'
 
+
 function DeleteBike() {
     const {id}=useParams()
     const navigate=useNavigate()
     const handleDelete=(id)=>{
-        axios.delete(`http://localhost:3900/api/bike/delete-bike/${id}`)
+        // axios.delete(`http://localhost:3900/api/bike/delete-bike/${id}`)
+        axios.delete(`https://gearup-motors.onrender.com/api/bike/delete-bike/${id}`)
+
         .then((response)=>
         navigate('../Bike'))
 

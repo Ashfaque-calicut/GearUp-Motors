@@ -9,10 +9,13 @@ const Profile = () => {
   const token=sessionStorage.getItem('token')
  const[profile,setProfile]=useState([])
 
+ 
 
 
   useEffect(() => {
-      axios.get(`http://localhost:3900/api/bike/profile`,{
+      // axios.get(`http://localhost:3900/api/bike/profile`,{
+        axios.get(`https://gearup-motors.onrender.com/api/bike/profile`,{
+
        headers:{
         Authorization:`Bearer ${token}`
        }

@@ -31,7 +31,9 @@ function BookingForm() {
     };
 
     axios
-      .post('http://localhost:3900/api/booking/add-booking', bookingFormData, config)
+      // .post('http://localhost:3900/api/booking/add-booking', bookingFormData, config)
+      .post('https://gearup-motors.onrender.com/api/booking/add-booking', bookingFormData, config)
+
       .then((response) => {
         navigate('/user-booking'); 
       })

@@ -11,7 +11,8 @@ const BikeCard = () => {
   const [role, setRole] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:3900/api/bike/admin-auth", {
+      // .get("http://localhost:3900/api/bike/admin-auth", {
+        .get("https://gearup-motors.onrender.com/api/bike/admin-auth",{
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -26,7 +27,8 @@ const BikeCard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3900/api/bike/view-bike")
+      // .get("http://localhost:3900/api/bike/view-bike")
+      .get("https://gearup-motors.onrender.com/api/bike/view-bike")
       .then((response) => {
         console.log(" Response:", response.data.data);
         setBikee(response.data.data);

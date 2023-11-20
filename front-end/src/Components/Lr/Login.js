@@ -6,6 +6,7 @@ import axios from 'axios';
 import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -17,7 +18,9 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3900/api/login', login)
+      // .post('http://localhost:3900/api/login', login)
+      .post('https://gearup-motors.onrender.com/api/login', login)
+
       .then((response) => {
         console.log(response);
         sessionStorage.setItem('token', response.data.token);

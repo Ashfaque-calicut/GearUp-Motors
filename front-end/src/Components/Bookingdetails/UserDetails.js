@@ -6,10 +6,11 @@ import './UserDetails.css';
 const UserDetails = () => {
   const token = sessionStorage.getItem('token');
   const [userData, setUserData] = useState([]);
-
   useEffect(() => {
     axios
-      .get(`http://localhost:3900/api/booking/user-booking`, {
+      // .get(`http://localhost:3900/api/booking/user-booking`, {
+        .get(`https://gearup-motors.onrender.com/api/booking/user-booking`, {
+
         headers: {
           Authorization: `Bearer ${token}`,
         },

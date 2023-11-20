@@ -7,7 +7,6 @@ import Bikes from './Pages/Bikes';
 import Login from './Components/Lr/Login';
 import Register from './Components/Lr/Register';
 import AddBikeForm from './Components/AddBike/AddBikeForm';
-
 import EditBikeForm from './Components/EditBike/EditBikeForm';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
