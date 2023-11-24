@@ -23,15 +23,16 @@
 }
 
 .about-content {
-  position: relative; /* Change from flex to relative positioning */
+  position: relative;
   max-width: 800px;
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.about-text {
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  text-align: center;
-  margin: 0 auto; /* Center the content horizontally */
 }
 
 /* Responsive adjustments */
@@ -41,6 +42,10 @@
   }
 
   .about-content {
+    max-width: 90%;
+  }
+
+  .about-text {
     padding: 1.5rem;
   }
 }
