@@ -10,7 +10,7 @@ const Bikes = () => {
 
   if (token) {
     return (
-      <div className="app">
+      <div className="app" >
         <main className="main-content">
           <BikeCard />
         </main>
@@ -19,7 +19,7 @@ const Bikes = () => {
   }
 
   return (
-    <div className="app">
+    <div className="app"style={{height:"390px"}}>
       <main className="main-content">
         <center>
           <p>You need to be logged in to view bikes.</p>

@@ -33,13 +33,13 @@ const Header = () => {
               Home
             </Link>
           </li>
-          {token && (
+       
             <li>
               <Link to='/Bike' className='nav-link' onClick={toggleMenu}>
-                Bikes
+                Bikes List
               </Link>
             </li>
-          )}
+          
           {role == 2 && (
             <li>
               <Link to='/Booking' className='nav-link' onClick={toggleMenu}>
