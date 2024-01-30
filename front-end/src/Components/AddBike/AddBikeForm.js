@@ -33,7 +33,7 @@ function AddBikeForm() {
 
 
 
-    // axios.post(`http://localhost:3900/api/bike/add-bike`,formData)
+    //  axios.post(`http://localhost:3900/api/bike/add-bike`,formData)
     axios.post(`https://gearup-motors.onrender.com/api/bike/add-bike`,formData)
   .then((response)=>{
     navigate('/Bike')

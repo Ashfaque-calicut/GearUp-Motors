@@ -18,8 +18,8 @@ function EditBikeForm() {
 
   useEffect(() => {
     axios
-      // .get(`http://localhost:3900/api/bike/singlebike-bike/${id}`)
-      .get(`https://gearup-motors.onrender.com/api/bike/singlebike-bike/${id}`)
+      .get(`http://localhost:3900/api/bike/singlebike-bike/${id}`)
+      // .get(`https://gearup-motors.onrender.com/api/bike/singlebike-bike/${id}`)
 
       .then((response) => {
         console.log("Response:", response.data.data);

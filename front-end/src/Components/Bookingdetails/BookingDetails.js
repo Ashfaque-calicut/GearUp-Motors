@@ -32,8 +32,8 @@ function BookingDetails() {
   
 
   const handleReject = (bookingId, index) => {
-    axios.put(`http://localhost:3900/api/booking/reject-booking/${bookingId}`)
-    // axios.put(`https://gearup-motors.onrender.com/api/booking/reject-booking/${bookingId}`)
+    // axios.put(`http://localhost:3900/api/booking/reject-booking/${bookingId}`)
+    axios.put(`https://gearup-motors.onrender.com/api/booking/reject-booking/${bookingId}`)
 
       .then((response) => {
         const newStatusData = [...statusData];
@@ -43,8 +43,8 @@ function BookingDetails() {
   };
 
   const handleAccept = (bookingId, index) => {
-    axios.put(`http://localhost:3900/api/booking/approve-booking/${bookingId}`)
-    // axios.put(`https://gearup-motors.onrender.com/api/booking/approve-booking/${bookingId}`)
+    // axios.put(`http://localhost:3900/api/booking/approve-booking/${bookingId}`)
+    axios.put(`https://gearup-motors.onrender.com/api/booking/approve-booking/${bookingId}`)
 
       .then((response) => {
         const newStatusData = [...statusData];

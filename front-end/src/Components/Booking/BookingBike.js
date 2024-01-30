@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
+import './BookingBike.css';
 
 function BookingForm() {
   const token = sessionStorage.getItem('token');
@@ -35,7 +36,7 @@ function BookingForm() {
       .post('https://gearup-motors.onrender.com/api/booking/add-booking', bookingFormData, config)
 
       .then((response) => {
-        navigate('/user-booking'); 
+        navigate('/user-booking');
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -43,10 +44,11 @@ function BookingForm() {
   }
 
   return (
-    <Container className="booking-form" style={{ width: '900px', height: '600px' }}>
+    <Container className="booking-form">
       <Form onSubmit={handleSubmit}>
-      <h2>Booking Form</h2>
-      <Form.Group controlId="bikename">
+        <h2>Booking Form</h2>
+
+        <Form.Group controlId="bikename">
           <Form.Label>Bike Name:</Form.Label>
           <Form.Control
             type="text"
@@ -89,8 +91,6 @@ function BookingForm() {
             required
           />
         </Form.Group>
-
-      
 
         <Form.Group controlId="bookingdate">
           <Form.Label>Booking Date:</Form.Label>
